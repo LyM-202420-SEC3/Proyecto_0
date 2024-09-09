@@ -301,7 +301,6 @@ def syntax_bloque(bloque):
     return sintaxis
     
 
-#ojo me toca revisar los casos en que esta vacio pa no delvolver false, digamos exect{}
 def syntax_definicion(tokens):
     sintaxis = True
     definicion = tokens[0].upper()
@@ -429,7 +428,7 @@ texto6 = '''
 NEW MACRO fill ()
   { 
   rep one times 
-  {  if not (zero?(myChips)) { drop(1);}  else { nop; } fi ;} ; 
+  {  if (zero?(myChips)) { drop(1);}  else { nop; } fi ;} per ; 
   }
 '''
 
